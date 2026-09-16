@@ -3,5 +3,9 @@ def puissance(a, b):
         raise TypeError("que des entiers")
     if a == 0 and b < 0:
         raise Exception("0 puissance négative est indéfini")
-    else:
-        return a ** b
+    resultat = 1
+    for i in range(abs(b)):
+        resultat = resultat * a
+    if b < 0:
+        return 1 / resultat
+    return resultat
